@@ -1,126 +1,89 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가맹문의 | 닭갈비가 싸닭</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;600&family=Noto+Sans+KR:wght@300;400;500;600;700&family=SUIT:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="#hero" class="logo" aria-label="닭갈비가 싸닭">
-                <img src=".idx/public/logo.jpg" alt="닭갈비가 싸닭 로고" class="logo-image">
-            </a>
-            <div class="header-contact">
-                <a class="contact-link" href="tel:01044502892" aria-label="가맹문의 전화걸기 010-4450-2892">가맹 문의 010-4450-2892</a>
-            </div>
-        </div>
-    </header>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <main>
-        <section id="hero" class="hero">
-            <h1 class="hero-title">
-                <span class="hero-line1 highlight-red">원가부터 매출까지 설계된</span>
-                <span class="hero-line2 highlight-gradient">닭갈비 브랜드</span>
-            </h1>
-            <div class="hero-video">
-                <video class="hero-media" src=".idx/public/hero.mov" autoplay muted loop playsinline></video>
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <p class="hero-sub">자체 레시피 · 직영 소스공장 생산 · 10분 완성 조리 · 배달 특화 운영 세팅</p>
-                </div>
-                <button class="mute-toggle" type="button" aria-label="음소거 해제" aria-pressed="true">🔇</button>
-            </div>
-        </section>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.9.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.9.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.9.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-        <section id="features" class="features">
-            <div class="section-head feature-head">
-                <h2>
-                    <span class="line1">소자본 창업, 기존 매장</span>
-                    <span class="line2">전환, 샵인샵 운영에</span>
-                    <span class="line3 highlight-red">최적화된 운영 설계</span>
-                </h2>
-            </div>
-            <div class="feature-grid">
-                <article class="feature-card description-box">
-                    <h3>공장에서 직접 만드는 자체 레시피 소스</h3>
-                    <p>핵심 소스를 직접 생산해 유통 단계를 줄이고, 원가 구조를 안정적으로 설계했습니다.</p>
-                    <div class="feature-video feature-video-1 vertical vertical-portrait video-card">
-                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata" data-start="3">
-                            <source src="/public/new process.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </article>
-                <article class="feature-card description-box">
-                    <h3>웍 기반 10분 완성 조리</h3>
-                    <p>표준화된 조리 동선으로 숙련도 부담을 줄이고, 빠른 회전이 가능하도록 설계했습니다.</p>
-                    <div class="feature-video feature-video-2 landscape video-card">
-                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
-                            <source src="/public/new cook.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </article>
-                <article class="feature-card description-box">
-                    <h3>배달에 최적화된 메뉴 구성</h3>
-                    <p>포장·배달 동선을 고려한 구성으로, 시간대별 주문 흐름에 대응하기 쉽습니다.</p>
-                    <div class="feature-video feature-video-3 landscape video-card">
-                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
-                            <source src="/public/newmenu.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-        <section id="inquiry" class="inquiry">
-            <div class="section-head">
-                <h2>무료 창업 상담 신청</h2>
-                <p>간단한 정보만 남겨주시면 1:1로 상담을 안내드립니다.</p>
-            </div>
-            <form class="inquiry-form">
-                <label>
-                    이름
-                    <input type="text" name="name" required>
-                </label>
-                <label>
-                    연락처
-                    <input type="tel" name="phone" required>
-                </label>
-                <fieldset class="radio-group">
-                    <legend>창업 유형 선택</legend>
-                    <label class="radio-item">
-                        <input type="radio" name="startup_type" value="신규 창업" required>
-                        신규 창업
-                    </label>
-                    <label class="radio-item">
-                        <input type="radio" name="startup_type" value="기존 매장 전환" required>
-                        기존 매장 전환
-                    </label>
-                    <label class="radio-item">
-                        <input type="radio" name="startup_type" value="샵인샵 운영" required>
-                        샵인샵 운영
-                    </label>
-                </fieldset>
-                <label>
-                    희망 지역
-                    <input type="text" name="region">
-                </label>
-                <label>
-                    상담 가능 시간
-                    <input type="text" name="time">
-                </label>
-                <button type="submit" class="btn primary">1:1 창업 상담 예약하기</button>
-            </form>
-        </section>
-    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-    <footer class="site-footer">
-        <p>&copy; 2026 닭갈비가 싸닭. All Rights Reserved.</p>
-    </footer>
-    <script src="main.js"></script>
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
