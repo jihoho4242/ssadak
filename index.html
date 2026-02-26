@@ -1,14 +1,126 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가맹문의 | 닭갈비가 싸닭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;600&family=Noto+Sans+KR:wght@300;400;500;600;700&family=SUIT:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="닭갈비가 싸닭">
+                <img src=".idx/public/logo.jpg" alt="닭갈비가 싸닭 로고" class="logo-image">
+            </a>
+            <div class="header-contact">
+                <a class="contact-link" href="tel:01044502892" aria-label="가맹문의 전화걸기 010-4450-2892">가맹 문의 010-4450-2892</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1 class="hero-title">
+                <span class="hero-line1 highlight-red">원가부터 매출까지 설계된</span>
+                <span class="hero-line2 highlight-gradient">닭갈비 브랜드</span>
+            </h1>
+            <div class="hero-video">
+                <video class="hero-media" src=".idx/public/hero.mov" autoplay muted loop playsinline></video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <p class="hero-sub">자체 레시피 · 직영 소스공장 생산 · 10분 완성 조리 · 배달 특화 운영 세팅</p>
+                </div>
+                <button class="mute-toggle" type="button" aria-label="음소거 해제" aria-pressed="true">🔇</button>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="section-head feature-head">
+                <h2>
+                    <span class="line1">소자본 창업, 기존 매장</span>
+                    <span class="line2">전환, 샵인샵 운영에</span>
+                    <span class="line3 highlight-red">최적화된 운영 설계</span>
+                </h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card description-box">
+                    <h3>공장에서 직접 만드는 자체 레시피 소스</h3>
+                    <p>핵심 소스를 직접 생산해 유통 단계를 줄이고, 원가 구조를 안정적으로 설계했습니다.</p>
+                    <div class="feature-video feature-video-1 vertical vertical-portrait video-card">
+                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata" data-start="3">
+                            <source src="/public/new process.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+                <article class="feature-card description-box">
+                    <h3>웍 기반 10분 완성 조리</h3>
+                    <p>표준화된 조리 동선으로 숙련도 부담을 줄이고, 빠른 회전이 가능하도록 설계했습니다.</p>
+                    <div class="feature-video feature-video-2 landscape video-card">
+                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
+                            <source src="/public/new cook.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+                <article class="feature-card description-box">
+                    <h3>배달에 최적화된 메뉴 구성</h3>
+                    <p>포장·배달 동선을 고려한 구성으로, 시간대별 주문 흐름에 대응하기 쉽습니다.</p>
+                    <div class="feature-video feature-video-3 landscape video-card">
+                        <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
+                            <source src="/public/newmenu.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="inquiry" class="inquiry">
+            <div class="section-head">
+                <h2>무료 창업 상담 신청</h2>
+                <p>간단한 정보만 남겨주시면 1:1로 상담을 안내드립니다.</p>
+            </div>
+            <form class="inquiry-form">
+                <label>
+                    이름
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    연락처
+                    <input type="tel" name="phone" required>
+                </label>
+                <fieldset class="radio-group">
+                    <legend>창업 유형 선택</legend>
+                    <label class="radio-item">
+                        <input type="radio" name="startup_type" value="신규 창업" required>
+                        신규 창업
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="startup_type" value="기존 매장 전환" required>
+                        기존 매장 전환
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="startup_type" value="샵인샵 운영" required>
+                        샵인샵 운영
+                    </label>
+                </fieldset>
+                <label>
+                    희망 지역
+                    <input type="text" name="region">
+                </label>
+                <label>
+                    상담 가능 시간
+                    <input type="text" name="time">
+                </label>
+                <button type="submit" class="btn primary">1:1 창업 상담 예약하기</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 닭갈비가 싸닭. All Rights Reserved.</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
