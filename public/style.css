@@ -270,6 +270,16 @@ a {
     font-weight: 600;
 }
 
+.feature-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.feature-title-line {
+    white-space: nowrap;
+}
+
 .feature-card p {
     margin: 0;
     color: var(--muted);
@@ -574,6 +584,12 @@ a {
     .btn,
     .inquiry-form button {
         width: 100%;
+    }
+
+    .feature-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
     }
 
 }
