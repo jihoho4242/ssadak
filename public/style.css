@@ -309,8 +309,7 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+    background: transparent;
 }
 
 .feature-video-1 .factory-crop video {
@@ -319,6 +318,16 @@ a {
     object-fit: cover;
     object-position: top;
     display: block;
+}
+
+.feature-video-1 {
+    background: transparent;
+    border-color: transparent;
+}
+
+.feature-video-1 .factory-crop::before,
+.feature-video-1 .factory-crop::after {
+    content: none;
 }
 
 .feature-video.vertical {
@@ -426,14 +435,14 @@ a {
 
 .radio-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.6rem;
+    gap: 8px;
     color: var(--text);
 }
 
 .radio-item input {
     accent-color: var(--gold);
-    transform: translateY(2px);
 }
 
 .btn {
@@ -567,9 +576,6 @@ a {
         width: 100%;
     }
 
-    .radio-item input {
-        transform: translateY(8px);
-    }
 }
 
 @media (max-width: 640px) {
