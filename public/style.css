@@ -433,6 +433,7 @@ a {
 
 .radio-item input {
     accent-color: var(--gold);
+    transform: translateY(2px);
 }
 
 .btn {
@@ -564,6 +565,10 @@ a {
     .btn,
     .inquiry-form button {
         width: 100%;
+    }
+
+    .radio-item input {
+        transform: translateY(8px);
     }
 }
 
